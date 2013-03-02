@@ -56,12 +56,12 @@
 	height: 76px;
 	top: 35px;
 	left: 162px;
-	background: url(images/playersprite.png) 0px -160px;
+	background: url(images/playersprite.png) -1px -160px;
 	background-repeat: no-repeat;
 }
 #mpPlay:active
 {
-	background: url(images/playersprite.png) -76px -160px;
+	background: url(images/playersprite.png) -78px -160px;
 	background-repeat: no-repeat;
 }
 #mpList
@@ -71,12 +71,12 @@
 	height: 50px;
 	top: 48px;
 	left: 40px;
-	background: url(images/playersprite.png) -152px -160px;
+	background: url(images/playersprite.png) -154px -161px;
 	background-repeat: no-repeat;
 }
 #mpList:active
 {
-	background: url(images/playersprite.png) -152px -210px;
+	background: url(images/playersprite.png) -154px -211px;
 	background-repeat: no-repeat;
 }
 #mpNext
@@ -86,12 +86,12 @@
 	height: 50px;
 	top: 22px;
 	left: 101px;
-	background: url(images/playersprite.png) -202px -160px;
+	background: url(images/playersprite.png) -204px -161px;
 	background-repeat: no-repeat;
 }
 #mpNext:active
 {
-	background: url(images/playersprite.png) -202px -210px;
+	background: url(images/playersprite.png) -204px -211px;
 	background-repeat: no-repeat;
 }
 #mpPrev
@@ -101,12 +101,42 @@
 	height: 50px;
 	top: 74px;
 	left: 101px;
-	background: url(images/playersprite.png) -252px -160px;
+	background: url(images/playersprite.png) -256px -161px;
 	background-repeat: no-repeat;
 }
 #mpPrev:active
 {
-	background: url(images/playersprite.png) -252px -210px;
+	background: url(images/playersprite.png) -256px -211px;
+	background-repeat: no-repeat;
+}
+#mpVolDn
+{
+	position: absolute;
+	width: 33px;
+	height: 33px;
+	top: 80px;
+	left: 290px;
+	background: url(images/playersprite.png) 0px -237px;
+	background-repeat: no-repeat;
+}
+#mpVolDn:active
+{
+	background: url(images/playersprite.png) -33px -237px;
+	background-repeat: no-repeat;
+}
+#mpVolUp
+{
+	position: absolute;
+	width: 33px;
+	height: 33px;
+	top: 80px;
+	left: 250px;
+	background: url(images/playersprite.png) -66px -237px;
+	background-repeat: no-repeat;
+}
+#mpVolUp:active
+{
+	background: url(images/playersprite.png) -99px -237px;
 	background-repeat: no-repeat;
 }
 .button:hover
