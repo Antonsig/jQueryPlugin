@@ -13,20 +13,31 @@
       
         // Fela default spilarann
         //$('#spilarinn').css('display', 'none');
-        $('#spilarinn ul').css('display', 'none');
+        //$('#spilarinn ul').css('display', 'none');
         
         // Id sett við hvert li á lag 
         var $li = $('#spilarinn ul > li').attr('id', function(i){
-            return "lag" + (i + 1);
+            return "lag" + (i);
         });
         
         // Lagalisti búinn til
         var songlist = $li.toArray();
-
+        
+        // Upphafsnúmer lags        
+        var current_song = 0;
+        
+        // Náð í id spilandi lags
+        var hl = "#lag" + current_song;
+        console.log(hl);
+        var hlf = $(hl);
+        
+        
         // Spilari búinn til og sendur
         var player = $("<audio autoplay='autoplay' controls='controls' id='spilari'>");    
         for(var i=0; i<songlist.length; i++){
-            $(player).append("<source src='" + songlist[i].textContent + "' />");
+            $(player).append("<source id='lag" + i + "' src='" + songlist[i].textContent + "' />");
+            
+            hlf.css({'background-color':'yellow'});
         }
         player.append("</audio>");
         $(this).append(player);
@@ -37,8 +48,8 @@
         // Upphafsstaða spilara
         var playing = pluginOptions.autoPlay;
         
-        // Upphafsnúmer lags
-        var current_song = 0;
+
+
         
         var refresh_timer = 1000;
                
@@ -51,10 +62,6 @@
                         '<div id="mpSongList"></div>'
                         // '<div id="mpVolSlider"></div>' 
         );
-        
-        
-        
-        
 
         // Play/Pause takka virkni
         $("#mpPlay").click( function() { 
@@ -73,48 +80,56 @@
         $("#mpVolDn").click( function() { spilarinn.volume -= 0.1; });
         // Next virkni
         $("#mpNext").click( function() {
+            current_song++;
+            var nextsong = spilarinn.next();
+            nextsong.play();
             
-            var curr = songlist[current_song].textContent;
-            console.log(curr);
-            curr++;
-            //document.getElementById("#lag2").play();
+
+            
         });
         
         // mpCurrent virkni
         var lengd_lags = this.duration;
         var stada_lags = this.currenttime;
         $("#mpCurrent").html(lengd_lags);
-        console.log("lengd lagsins er " + lengd_lags);
-        console.log("stada lagsins er " + stada_lags);
+
+        ////// Gamla Listinn af lögum ////////
+        // function showSongList(highlight){
+            // var mylist = $("<div id='lagalisti'></div>");
+            // for (var i=0; i<songlist.length; i++) {
+                // $(mylist).append("<div id=lag" + i + ">" + songlist[i].textContent + "</div>");
+            // };
+
+            // //console.log(hlf);
+            // // console.log($("#mpPlay"));
+            // // var temp = hlf.innerHTML();
+            // var temp2 = $('#lag1')
+            // console.log(temp2);
+            // // console.log("temp er: " + temp);
+            // $('#lag1').css({'background-color':'yellow'});
+            // $("#mpSongList").html(mylist);
+        // }
+        // showSongList(current_song);
         
-        // $("#mpVolSlider").slider({
-            // value: 60,
-            // orientation: "horizontal",
-            // range: "min",
-            // animate: true
-        // });
-        // $("#mpVolSlider").slider({
-            // orientation: "vertical",
-            // value: spilarinn.volume,
-            // min: 0,
-            // max: 1,
-            // range: 'min',
-            // animate: true,
-            // step: .1,
-            // slide: function(e, ui) {
-                // spilarinn.volume = ui.value;            
-            // }
-        // });
         var refresh = setInterval(
             function(){
+                //console.log(songlist.length);
                 var curr = songlist[current_song].textContent;
-                //$("#mpCurrent").html(curr);
-                $("#mpSongList").html(function() {
-                    for(var i=0; i<4; i++) {
-                        $(this).html('<div>' + songlist[i].textContent +'</div>');
-                    }
-                });
-        }, 1000);
+                //console.log("current er: " + curr);
+
+                
+                // $("#mpCurrent").html(curr);
+                
+                    // for (var i=0; i<songlist.length; i++) {
+                        // $("#mpSongList").html(function() {
+                            // var thelist
+                        // // $(this).html('<div>' + songlist[i].textContent +'</div>');
+                        // // // console.log(songlist[i].textContent);
+                         // // // $(this).html('<div>' + i +'</div>');
+                        // });
+                    // }
+                    
+            }, 1000);
             
       });
    };
