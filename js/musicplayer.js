@@ -12,11 +12,11 @@
     return this.each( function( ) {
       
         // Fela default spilarann
-        //$('#spilarinn').css('display', 'none');
-        //$('#spilarinn ul').css('display', 'none');
+        $('#playermain ul').css('display', 'none');
+        $('#spilari').css('display', 'none');
         
         // Id sett við hvert li á lag 
-        var $li = $('#spilarinn ul > li').attr('id', function(i){
+        var $li = $('#playermain ul > li').attr('id', function(i){
             return "lag" + (i);
         });
         
@@ -41,26 +41,26 @@
         }
         player.append("</audio>");
         $(this).append(player);
-        
+
         // Spilarinn geymdur í breytu
         var spilarinn = document.getElementById('spilari');
-        
+        console.log(player);
         // Upphafsstaða spilara
         var playing = pluginOptions.autoPlay;
         
-
-
-        
         var refresh_timer = 1000;
                
-        $(this).after(  '<a id="mpPlay" href="#">Play</a><br/>'     +
-                        '<a id="mpVolUp" href="#">Vol+</a><br/>'    +
-                        '<a id="mpVolDn" href="#">Vol-</a><br/>'    +
-                        '<a id="mpNext" href="#">Next</a><br/>'     +
-                        '<a id="mpPrev" href="#">Prev</a><br/>'     +
-                        '<div id="mpCurrent" >1</div>'               +
-                        '<div id="mpSongList"></div>'
-                        // '<div id="mpVolSlider"></div>' 
+        $(this).append(  '<div id="oval">'                           +
+                        '<div id="mpPlay" class="button"></div>'    +
+                        '<div id="mpList" class="button"></div>'    +
+                        '<div id="mpNext" class="button"></div>'    +
+                        '<div id="mpPrev" class="button"></div>'    +
+                        '<div id="mpVolUp" class="button"></div>'   +
+                        '<div id="mpVolDn" class="button"></div>'   +
+                        '</div>'                                    +
+                        '<div id="list"><div id="listbottom"></div></div>'
+        
+        
         );
 
         // Play/Pause takka virkni
@@ -80,9 +80,16 @@
         $("#mpVolDn").click( function() { spilarinn.volume -= 0.1; });
         // Next virkni
         $("#mpNext").click( function() {
+            spilarinn.pause();
+            console.log(songlist[current_song]);
+            // spilarinn.currentSrc = '';
             current_song++;
-            var nextsong = spilarinn.next();
-            nextsong.play();
+            console.log(songlist[current_song].url);
+            spilarinn.src = songlist[current_song].url;
+            spilarinn.play();
+            //var nextsong = spilarinn.next();
+            //console.log(spilarinn);
+            //nextsong.play();
             
 
             

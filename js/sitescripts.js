@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $('#spilarinn').musicPlayer({autoPlay: 'False', defaultVolume: 100});
+    $('#playermain').musicPlayer({autoPlay: 'false', defaultVolume: 100});
 });
