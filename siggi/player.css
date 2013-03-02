@@ -45,7 +45,7 @@
 	background: url(images/listbottom.png);
 	background-repeat: repeat-x;
 }
-#playpause
+#mpPlay
 {
 	position: absolute;
 	width: 76px;
@@ -55,12 +55,12 @@
 	background: url(images/playersprite.png) 0px -160px;
 	background-repeat: no-repeat;
 }
-#playpause:active
+#mpPlay:active
 {
 	background: url(images/playersprite.png) -76px -160px;
 	background-repeat: no-repeat;
 }
-#listbutton
+#mpList
 {
 	position: absolute;
 	width: 50px;
@@ -70,12 +70,12 @@
 	background: url(images/playersprite.png) -152px -160px;
 	background-repeat: no-repeat;
 }
-#listbutton:active
+#mpList:active
 {
 	background: url(images/playersprite.png) -152px -210px;
 	background-repeat: no-repeat;
 }
-#next
+#mpNext
 {
 	position: absolute;
 	width: 50px;
@@ -85,12 +85,12 @@
 	background: url(images/playersprite.png) -202px -160px;
 	background-repeat: no-repeat;
 }
-#next:active
+#mpNext:active
 {
 	background: url(images/playersprite.png) -202px -210px;
 	background-repeat: no-repeat;
 }
-#previous
+#mpPrev
 {
 	position: absolute;
 	width: 50px;
@@ -100,7 +100,7 @@
 	background: url(images/playersprite.png) -252px -160px;
 	background-repeat: no-repeat;
 }
-#previous:active
+#mpPrev:active
 {
 	background: url(images/playersprite.png) -252px -210px;
 	background-repeat: no-repeat;
