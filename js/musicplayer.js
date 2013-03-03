@@ -16,12 +16,18 @@
         $('#spilari').css('display', 'none');
         $('#playermain ul').css('position', 'absolute');
         $('#playermain ul').css('top', '200px');
+        $('#playermain ul').css('list-style', 'none');
+        $('#playermain ul').css('font-size', '10px');
+        $('#playermain ul').css('margin', '0px');
         
         // Id sett við hvert li á lag 
         var $li = $('#playermain ul > li').attr('id', function(i){
             return  (i);
         });
         
+        // Lagalisti búinn til
+        var songlist = $li.toArray();
+
         // Upphafsstaða spilunar 
         var playing = pluginOptions.autoPlay;
         if(playing == "true") {
@@ -33,15 +39,8 @@
         
         // Upphafsnúmer lags        
         var current_song = 0;
-        
-        // Náð í id spilandi lags
-        var hl = "#" + current_song;
-        console.log(hl);
-        var hlf = $(hl);
-        
-        // Lagalisti búinn til
-        var songlist = $li.toArray();
-        
+                
+
         // Spilari búinn til og sendur
         var player = $("<audio " + autop + " controls='controls' id='spilari'>");
         $(player).append("<source src='" + songlist[current_song].textContent + "' />");
@@ -52,6 +51,13 @@
             // hlf.css({'background-color':'yellow'});
         // }
         /////////////////////////////////////////////////
+        
+        function merkjaLag(id) {
+            var hl = "#" + current_song;
+            console.log(hl);
+            var hlf = $(hl);
+            
+        }
         player.append("</audio>");
         $(this).append(player);
         
