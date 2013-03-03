@@ -79,8 +79,8 @@
                 '<div id="mpPrev" class="button"></div>'            +
                 '<div id="mpVolUp" class="button"></div>'           +
                 '<div id="mpVolDn" class="button"></div>'           +
-                '<div id="mpCurrLen" class="button"></div>'         +
-                '<div id="mpCurrPos" class="button"></div>'         +
+                '<div id="mpCurrPos_progr" class="button"></div>'   +
+                '<div id="mpProgress" class="button"></div>'        +
                 '</div>'
         );
         
