@@ -79,9 +79,27 @@
         });
 
         // Volume up virkni
-        $("#mpVolUp").click( function() { spilarinn.volume += 0.1; });
+        $("#mpVolUp").click( function() {
+            console.log(spilarinn.volume);
+            if(spilarinn.volume > 0.9) {
+                spilarinn.volume = 1;
+            }
+            else {
+                spilarinn.volume += 0.1;
+            }
+        });
         // Volume down virkni
-        $("#mpVolDn").click( function() { spilarinn.volume -= 0.1; });
+        $("#mpVolDn").click( function() { 
+            if(spilarinn.volume < 0.1) {
+                spilarinn.volume = 0;
+                console.log(spilarinn.volume);
+            }
+            else {
+                spilarinn.volume -= 0.1;
+                console.log(spilarinn.volume);            
+            }    
+        });
+        
         // Next virkni
         $("#mpNext").click( function() {
              spilarinn.pause();
