@@ -86,7 +86,7 @@
         
         console.log(pluginOptions.compact);
         // Upphafsstilling á compact
-        if(pluginOptions.compact == ) {
+        if(pluginOptions.compact == false) {
             $("#list").fadeToggle(1500);       
         };
 
