@@ -97,6 +97,7 @@
             current_song = parseInt($(this).attr('id'));
             merkjaLag(current_song);
             $(player).html("<source src='" + songlist[current_song].textContent + "' />");
+            playing = true;
             spilarinn.play();     
         });
 
@@ -203,7 +204,7 @@
                 stada_lags = spilarinn.currentTime;
                 lengd_lags = spilarinn.duration;
                 updatePlayerStatus(stada_lags, lengd_lags);
-            }, 1000);            
+            }, 500);            
       });
    };
 
