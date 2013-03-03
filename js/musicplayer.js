@@ -74,7 +74,7 @@
             '<div id="mpVolUp" class="button"></div>'           +
             '<div id="mpVolDn" class="button"></div>'           +
             '<div id="mpCurrPos_progr" class="button"></div>'   +
-            '<div id="mpProgress" class="button"><img src="css/images/progr.png"/></div>'        +
+            '<div id="mpProgress" class="button"></div>'        +
             '</div>'                                            +
             '<div id="list"><div id="listbottom"></div></div>'
         );
@@ -175,14 +175,15 @@
         // Uppfærir lifandi div í spilara
         function updatePlayerStatus(stada, len) {            
             $('#mpCurrPos_progr').html(lagaTima(len)+" / "+lagaTima(stada));
-            $('#mpCurrLen').html(lagaTima(len));
+            
+            $('#mpProgress').html('<img src="css/images/progr.png" height="12px"'+" width="+(stada/len)*118+"px"+'/>');
         };
         
         // Uppfærir stöðu lifandi breyta
         var refresh = setInterval( function(){
                 stada_lags = spilarinn.currentTime;
                 lengd_lags = spilarinn.duration;
-                updatePlayerStatus(stada_lags, lengd_lags);                   
+                updatePlayerStatus(stada_lags, lengd_lags);                  
             }, 1000);
             
       });
