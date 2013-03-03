@@ -73,8 +73,8 @@
             '<div id="mpPrev" class="button"></div>'            +
             '<div id="mpVolUp" class="button"></div>'           +
             '<div id="mpVolDn" class="button"></div>'           +
-            '<div id="mpCurrLen" class="button"></div>'         +
-            '<div id="mpCurrPos" class="button"></div>'         +
+            '<div id="mpCurrPos_progr" class="button"></div>'   +
+            '<div id="mpProgress" class="button"><img src="css/images/progr.png"/></div>'        +
             '</div>'                                            +
             '<div id="list"><div id="listbottom"></div></div>'
         );
@@ -174,7 +174,7 @@
         
         // Uppfærir lifandi div í spilara
         function updatePlayerStatus(stada, len) {            
-            $('#mpCurrPos').html(lagaTima(stada));
+            $('#mpCurrPos_progr').html(lagaTima(len)+" / "+lagaTima(stada));
             $('#mpCurrLen').html(lagaTima(len));
         };
         

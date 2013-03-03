@@ -58,7 +58,7 @@
 }
 #mpPlay:active
 {
-	background: url(images/playersprite.png) -78px -160px;
+	background: url(images/playersprite.png) -77px -160px;
 	background-repeat: no-repeat;
 }
 #mpList
@@ -68,12 +68,12 @@
 	height: 50px;
 	top: 48px;
 	left: 40px;
-	background: url(images/playersprite.png) -154px -161px;
+	background: url(images/playersprite.png) -153px -161px;
 	background-repeat: no-repeat;
 }
 #mpList:active
 {
-	background: url(images/playersprite.png) -154px -211px;
+	background: url(images/playersprite.png) -153px -211px;
 	background-repeat: no-repeat;
 }
 #mpNext
@@ -83,12 +83,12 @@
 	height: 50px;
 	top: 22px;
 	left: 101px;
-	background: url(images/playersprite.png) -204px -161px;
+	background: url(images/playersprite.png) -203px -161px;
 	background-repeat: no-repeat;
 }
 #mpNext:active
 {
-	background: url(images/playersprite.png) -204px -211px;
+	background: url(images/playersprite.png) -203px -211px;
 	background-repeat: no-repeat;
 }
 #mpPrev
@@ -98,12 +98,12 @@
 	height: 50px;
 	top: 74px;
 	left: 101px;
-	background: url(images/playersprite.png) -256px -161px;
+	background: url(images/playersprite.png) -253px -161px;
 	background-repeat: no-repeat;
 }
 #mpPrev:active
 {
-	background: url(images/playersprite.png) -256px -211px;
+	background: url(images/playersprite.png) -253px -211px;
 	background-repeat: no-repeat;
 }
 #mpVolDn
@@ -111,7 +111,7 @@
 	position: absolute;
 	width: 33px;
 	height: 33px;
-	top: 80px;
+	top: 82px;
 	left: 250px;
 	background: url(images/playersprite.png) -66px -237px;
 	background-repeat: no-repeat;
@@ -126,7 +126,7 @@
 	position: absolute;
 	width: 33px;
 	height: 33px;
-	top: 80px;
+	top: 82px;
 	left: 290px;
 	background: url(images/playersprite.png) 0px -237px;
 	background-repeat: no-repeat;
@@ -135,6 +135,29 @@
 {
 	background: url(images/playersprite.png) -33px -237px;
 	background-repeat: no-repeat;
+}
+#mpCurrPos_progr
+{
+	position: absolute;
+	width: 100px;
+	height: 15px;
+	top: 46px;
+	left: 245px;
+	padding: 2px;
+	//background-color: #222;
+	font-family: "tahoma","verdana";
+	font-size: 12px;
+	color: #ccc;
+}
+#mpProgress
+{
+	position: absolute;
+	width: 120px;
+	height: 12px;
+	top: 65px;
+	left: 245px;
+	text-align: center;
+	background-repeat: no-repeat; 
 }
 .button:hover
 {
