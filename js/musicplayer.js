@@ -3,28 +3,25 @@
         
     var pluginOptions = {
       autoPlay: true,
-      defaultVolume: 100,
-      compact: false
+      defaultVolume: 60,
+      compact: true
       };
 
     if ( options ) { $.extend( pluginOptions, options ) }
     
     return this.each( function( ) {
       
-        // Fela default spilarann
-        //$('#playermain ul').css('display', 'none');
+        // setja upp css og Div á síðu
         $('#spilari').css('display', 'none');
         $('#playermain ul').css('position', 'absolute');
-        $('#playermain ul').css('top', '200px');
+        $('#playermain ul').css('top', '80px');
         $('#playermain ul').css('list-style', 'none');
+        $('#playermain ul').css('color', 'white');
         $('#playermain ul').css('font-size', '11px');
         $('#playermain ul').css('margin', '0px');
-        
-
-        
         $('#playermain ul').wrap('<div id="list"></div>');
         $('#playermain ul').after('<div id="listbottom"></div>');
-        //$('#playermain ul').after('</div>');
+
         
         // Id sett við hvert li á lag 
         var $li = $('#playermain ul > li').attr('id', function(i){
@@ -36,17 +33,17 @@
 
         // Upphafsstaða spilunar 
         var playing = pluginOptions.autoPlay;
+        console.log(playing);
         merkjaLag(current_song);
-        if(playing == "true") {
+        if(playing == true) {
             var autop = "autoplay";
         }
         else {
             var autop = "";
         }
-        
+
         // Upphafsnúmer lags        
         var current_song = 0;
-                
 
         // Spilari búinn til og sendur
         var player = $("<audio " + autop + " controls='controls' id='spilari'>");
@@ -63,13 +60,15 @@
                 var xx = $(x);
                 xx.css({'background-color':''});
             }
-            hlf.css({'background-color':'#DDD'});
+            hlf.css({'background-color':'#979771'});
         }
 
-
-        
         // Spilarinn geymdur í breytu
-        var spilarinn = document.getElementById('spilari');    
+        var spilarinn = document.getElementById('spilari');
+        
+        // Upphafsstilling hljóðstyrks
+        spilarinn.volume = pluginOptions.defaultVolume/100;
+        
         
         // Divum bætt við í spilarabreytu
         $(this).append(  
@@ -84,6 +83,13 @@
                 '<div id="mpCurrPos" class="button"></div>'         +
                 '</div>'
         );
+        
+        console.log(pluginOptions.compact);
+        // Upphafsstilling á compact
+        if(pluginOptions.compact == ) {
+            $("#list").fadeToggle(1500);       
+        };
+
         
         // Spilar lag sem smellt er á í lagalista.
         $('#playermain ul li').click(function() {
@@ -197,8 +203,7 @@
                 stada_lags = spilarinn.currentTime;
                 lengd_lags = spilarinn.duration;
                 updatePlayerStatus(stada_lags, lengd_lags);
-            }, 1000);
-            
+            }, 1000);            
       });
    };
 

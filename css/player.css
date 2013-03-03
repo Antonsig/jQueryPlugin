@@ -159,7 +159,7 @@
 	text-align: left;
 	background-repeat: no-repeat; 
 }
-.button:hover
+.button:hover, li:hover
 {
 	cursor:pointer;
 	cursor:hand;
