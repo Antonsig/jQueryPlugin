@@ -74,6 +74,10 @@
                 playing = false;
             }
         });
+        $("#mpList").click(function(){
+           $("#list").fadeToggle(1500);
+        });
+
         // Volume up virkni
         $("#mpVolUp").click( function() { spilarinn.volume += 0.1; });
         // Volume down virkni

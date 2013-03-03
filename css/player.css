@@ -10,8 +10,6 @@
 	height: 152px;
 	top: 50px;
 	left: 50px;
-
-	
 }
 #oval
 {
@@ -27,14 +25,13 @@
 	position: absolute;
 	z-index: 2;
 	width: 394px;
-	height: 200px;
-	max-height: 300px;
+	min-height: 200px;
+	display: none;
 	top: 70px;
 	left: 3px;
 	border-bottom-right-radius: 9px;
 	border-bottom-left-radius: 9px;
 	background: url(images/listback.png);
-	//background: -webkit-gradient(linear,left top, left bottom, from(#222), to(#ccc));
 	background-repeat: repeat-y;
 }
 #listbottom
@@ -115,13 +112,13 @@
 	width: 33px;
 	height: 33px;
 	top: 80px;
-	left: 290px;
-	background: url(images/playersprite.png) 0px -237px;
+	left: 250px;
+	background: url(images/playersprite.png) -66px -237px;
 	background-repeat: no-repeat;
 }
 #mpVolDn:active
 {
-	background: url(images/playersprite.png) -33px -237px;
+	background: url(images/playersprite.png) -99px -237px;
 	background-repeat: no-repeat;
 }
 #mpVolUp
@@ -130,13 +127,13 @@
 	width: 33px;
 	height: 33px;
 	top: 80px;
-	left: 250px;
-	background: url(images/playersprite.png) -66px -237px;
+	left: 290px;
+	background: url(images/playersprite.png) 0px -237px;
 	background-repeat: no-repeat;
 }
 #mpVolUp:active
 {
-	background: url(images/playersprite.png) -99px -237px;
+	background: url(images/playersprite.png) -33px -237px;
 	background-repeat: no-repeat;
 }
 .button:hover
