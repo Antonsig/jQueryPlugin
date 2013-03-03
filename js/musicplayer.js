@@ -84,20 +84,30 @@
         $("#mpVolDn").click( function() { spilarinn.volume -= 0.1; });
         // Next virkni
         $("#mpNext").click( function() {
-            spilarinn.pause();
-            console.log(songlist[current_song]);
+             spilarinn.pause();
+             //spilarinn.src = songlist[1];
+             spilarinn.play();
+
+
+         });
+
+            
+           
+
+            //spilarinn.pause();
+            //console.log(songlist[current_song]);
             // spilarinn.currentSrc = '';
-            current_song++;
-            console.log(songlist[current_song].url);
-            spilarinn.src = songlist[current_song].url;
-            spilarinn.play();
+            //current_song++;
+            //console.log(songlist[current_song].url);
+            //spilarinn.src = songlist[current_song].url;
+            //spilarinn.play();
             //var nextsong = spilarinn.next();
             //console.log(spilarinn);
             //nextsong.play();
             
 
             
-        });
+        //});
         
         // mpCurrent virkni
         var lengd_lags = this.duration;

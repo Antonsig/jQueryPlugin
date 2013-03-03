@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $('#playermain').musicPlayer({autoPlay: 'false', defaultVolume: 100});
+    $('#playermain').musicPlayer({autoPlay: 'false', defaultVolume: 60});
 });
