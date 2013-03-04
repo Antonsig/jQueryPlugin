@@ -101,7 +101,7 @@
             merkjaLag(current_song);
             $(player).html("<source src='" + songlist[current_song].textContent + "' />");
             playing = true;
-            spilarinn.play();     
+            spilarinn.play();
         });
 
         // Play-Pause takka virkni
@@ -188,8 +188,34 @@
         
         // Tekur inn slóð og skilar heiti lags
         function heitilags(s) {
+            //var len = s.length;
+            var str = s.replace(/^.*[\\\/]/, '')
+            //var lens = len;
+            //console.log(lens);
+            console.log(s);
+            // var str = new String();
+            // while (str[len] != /\//) {
+                // str[lens-len] = s[len];
+                // len--;
+                // console.log(len);
+            // }
             
+            // for(var i = 0; i < len; i++) {
+                // if(s[len-i] != "//") {
+                    // console.log(s[len-i]);
+                // }
+            // }
+            console.log(str);
+            // for(var len = s.length; len > 0; len--) {
+                        // console.log("Halló");
+                // while(s[len] != "/") {
+                    // str[len-rev_len] = s[len];
+                    // console.log(str);
+                // }
+
+            // }
         }
+        heitilags("http://baggalutur.is/mp3/Baggalutur_gledilegt_sumar.mp3");
         
         // Tekur inn tímalengt í sekúndum og skilar strengi á forminu "m:ss"
         function lagaTima(timi){
