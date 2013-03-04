@@ -53,13 +53,13 @@
 	width: 76px;
 	height: 76px;
 	top: 35px;
-	left: 162px;
-	background: url(images/playersprite.png) -1px -160px;
+	left: 154px;
+	background: url(images/playersprite.png) 0px -160px;
 	background-repeat: no-repeat;
 }
 #mpPlay:active
 {
-	background: url(images/playersprite.png) -77px -160px;
+	background: url(images/playersprite.png) -76px -160px;
 	background-repeat: no-repeat;
 }
 #mpList
@@ -83,7 +83,7 @@
 	width: 50px;
 	height: 50px;
 	top: 22px;
-	left: 101px;
+	left: 98px;
 	background: url(images/playersprite.png) -203px -161px;
 	background-repeat: no-repeat;
 }
@@ -98,7 +98,7 @@
 	width: 50px;
 	height: 50px;
 	top: 74px;
-	left: 101px;
+	left: 98px;
 	background: url(images/playersprite.png) -253px -161px;
 	background-repeat: no-repeat;
 }
@@ -159,6 +159,45 @@
 	left: 245px;
 	text-align: left;
 	//background-color: #f44;
+}
+#probottom
+{
+	position: absolute;
+	width: 118px;
+	height: 11px;
+	top: 68px;
+	left: 245px;
+	background-color: #444;
+}
+#mpleft
+{
+	position: absolute;
+	width: 15px;
+	height: 18px;
+	top: 65px;
+	left: 233px;
+	background: url(images/playersprite.png) -310px -160px;
+	background-repeat: no-repeat;
+}
+#mpleft:active
+{
+	background: url(images/playersprite.png) -325px -160px;
+	background-repeat: no-repeat;
+}
+#mpright
+{
+	position: absolute;
+	width: 15px;
+	height: 18px;
+	top: 65px;
+	left: 360px;
+	background: url(images/playersprite.png) -310px -178px;
+	background-repeat: no-repeat;
+}
+#mpright:active
+{
+	background: url(images/playersprite.png) -325px -178px;
+	background-repeat: no-repeat;
 }
 .button:hover, li:hover
 {

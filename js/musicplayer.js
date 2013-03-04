@@ -80,7 +80,10 @@
                 '<div id="mpVolUp" class="button"></div>'           +
                 '<div id="mpVolDn" class="button"></div>'           +
                 '<div id="mpCurrPos_progr" class="button"></div>'   +
+                '<div id="probottom"></div>'                        +
                 '<div id="mpProgress" class="button"></div>'        +
+                '<div id="mpleft" class="button"></div>'            +
+                '<div id="mpright" class="button"></div>'           +
                 '</div>'
         );
         
@@ -155,6 +158,21 @@
             merkjaLag(current_song);
             $(player).html("<source src='" + songlist[current_song].textContent + "' />");
             spilarinn.play();
+        });
+        $("#mpleft").mousedown( function(){
+            spilarinn.playbackRate = -3.0;
+        });
+
+        $("#mpleft").mouseup( function(){
+            spilarinn.playbackRate = 1.0;
+        });
+
+        $("#mpright").mousedown( function(){
+            spilarinn.playbackRate = 3.0;
+        });
+
+        $("#mpright").mouseup( function(){
+            spilarinn.playbackRate = 1.0;
         });
         
         // Previous virkni
