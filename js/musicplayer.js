@@ -11,17 +11,9 @@
     
     return this.each( function( ) {
       
-        // setja upp css og Div á síðu
-        $('#spilari').css('display', 'none');
-        $('#playermain ul').css('position', 'absolute');
-        $('#playermain ul').css('top', '80px');
-        $('#playermain ul').css('list-style', 'none');
-        $('#playermain ul').css('color', 'white');
-        $('#playermain ul').css('font-size', '11px');
-        $('#playermain ul').css('margin', '0px');
+        // Div á síðu
         $('#playermain ul').wrap('<div id="list"></div>');
         $('#playermain ul').after('<div id="listbottom"></div>');
-
         
         // Id sett við hvert li á lag 
         var $li = $('#playermain ul > li').attr('id', function(i){
@@ -87,7 +79,7 @@
                 '</div>'
         );
         
-        console.log(pluginOptions.compact);
+        //console.log(pluginOptions.compact);
         // Upphafsstilling á compact
         if(pluginOptions.compact == false) {
             $("#list").fadeToggle(1500);       
@@ -159,22 +151,7 @@
             $(player).html("<source src='" + songlist[current_song].textContent + "' />");
             spilarinn.play();
         });
-        $("#mpleft").mousedown( function(){
-            spilarinn.playbackRate = -3.0;
-        });
 
-        $("#mpleft").mouseup( function(){
-            spilarinn.playbackRate = 1.0;
-        });
-
-        $("#mpright").mousedown( function(){
-            spilarinn.playbackRate = 3.0;
-        });
-
-        $("#mpright").mouseup( function(){
-            spilarinn.playbackRate = 1.0;
-        });
-        
         // Previous virkni
         $("#mpPrev").click( function() {
             spilarinn.pause();
@@ -184,6 +161,23 @@
             merkjaLag(current_song);
             $(player).html("<source src='" + songlist[current_song].textContent + "' />");
             spilarinn.play();
+        });
+
+        // Spóla hratt fram og til baka
+        $("#mpleft").mousedown( function(){
+            spilarinn.playbackRate = -3;
+        });
+
+        $("#mpleft").mouseup( function(){
+            spilarinn.playbackRate = 1;
+        });
+
+        $("#mpright").mousedown( function(){
+            spilarinn.playbackRate = 3;
+        });
+
+        $("#mpright").mouseup( function(){
+            spilarinn.playbackRate = 1;
         });
         
         // Tekur inn slóð og skilar heiti lags
