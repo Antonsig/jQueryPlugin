@@ -1,0 +1,48 @@
+1.  Introduction
+
+    This plugin is used for implementing a very nice looking 
+    jQuery audio player to your existing website.
+    
+
+2.  Installation
+
+    To use this plugin these rules must be followed.
+
+    i)
+        Website must support HTML5.
+    ii)
+        Add jQuery to your project
+    iii)
+        On your webpage you must place 1 div with  id="playermain" 
+        followed by a unordered list with links to songs.
+        Also the website must execute the javascript shown below.
+          
+        <!-------------------Example----------------------->
+        <div id="playermain"></div>
+        <ul>
+          <li>http://www.someurltosong.com/thesong.mp3</li>
+          <li>http://www.someurltosong.com/anothersong.mp3</li>
+        </ul>
+        <script>
+            $(document).ready(function() {
+            $('#playermain').musicPlayer();
+            });
+        </script>
+        <!-----------------ExampleEnd---------------------->
+
+        
+3.  Configuration
+    
+    You can ajust the behavior of the plugin by adding array in to 
+    the musicPlayer function.
+        These are the options currently available
+        
+        SETTINGS        TYPE    DEFAULT     DESCRIPTION
+        autoPlay        bool    true        Player starts playing.
+        defaultVolume   int     60          Percent of volume. 0-100
+        compact         bool    true        Playlist hidden
+    
+        <!-------------------Example----------------------->
+        musicPlayer({autoPlay: false, defaultVolume: 100, compact: false})
+        
+    
