@@ -164,20 +164,12 @@
         });
 
         // Spóla hratt fram og til baka
-        $("#mpleft").mousedown( function(){
-            spilarinn.playbackRate = -3;
+        $("#mpleft").click( function(){
+            spilarinn.currentTime -=5.0;
         });
 
-        $("#mpleft").mouseup( function(){
-            spilarinn.playbackRate = 1;
-        });
-
-        $("#mpright").mousedown( function(){
-            spilarinn.playbackRate = 3;
-        });
-
-        $("#mpright").mouseup( function(){
-            spilarinn.playbackRate = 1;
+        $("#mpright").click( function(){
+            spilarinn.currentTime +=5.0;
         });
         
         // Tekur inn slóð og skilar heiti lags

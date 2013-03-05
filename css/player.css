@@ -67,7 +67,7 @@ body
 	position: absolute;
 	width: 76px;
 	height: 76px;
-	top: 35px;
+	top: 33px;
 	left: 154px;
 	background: url(images/playersprite.png) 0px -160px;
 	background-repeat: no-repeat;
@@ -157,8 +157,8 @@ body
 	position: absolute;
 	width: 100px;
 	height: 15px;
-	top: 46px;
-	left: 245px;
+	top: 42px;
+	left: 240px;
 	padding: 2px;
 	//background-color: #222;
 	font-family: "tahoma","verdana";
@@ -170,8 +170,8 @@ body
 	position: absolute;
 	width: 118px;
 	height: 12px;
-	top: 65px;
-	left: 245px;
+	top: 63px;
+	left: 246px;
 	text-align: left;
 	//background-color: #f44;
 }
@@ -180,38 +180,38 @@ body
 	position: absolute;
 	width: 118px;
 	height: 11px;
-	top: 68px;
-	left: 245px;
+	top: 66px;
+	left: 246px;
 	background-color: #444;
 }
 #mpleft
 {
 	position: absolute;
-	width: 15px;
+	width: 71px;
 	height: 18px;
-	top: 65px;
+	top: 62px;
 	left: 233px;
-	background: url(images/playersprite.png) -310px -160px;
+	background: url(images/playersprite.png) -304px -160px;
 	background-repeat: no-repeat;
 }
 #mpleft:active
 {
-	background: url(images/playersprite.png) -325px -160px;
+	background: url(images/playersprite.png) -304px -178px;
 	background-repeat: no-repeat;
 }
 #mpright
 {
 	position: absolute;
-	width: 15px;
+	width: 71px;
 	height: 18px;
-	top: 65px;
-	left: 360px;
-	background: url(images/playersprite.png) -310px -178px;
+	top: 62px;
+	left: 306px;
+	background: url(images/playersprite.png) -331px -160px;
 	background-repeat: no-repeat;
 }
 #mpright:active
 {
-	background: url(images/playersprite.png) -325px -178px;
+	background: url(images/playersprite.png) -331px -178px;
 	background-repeat: no-repeat;
 }
 .button:hover, li:hover
