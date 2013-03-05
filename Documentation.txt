@@ -11,8 +11,10 @@
     i)
         Website must support HTML5.
     ii)
-        Add jQuery to your project
+        Add jQuery to your project ("http://code.jquery.com/jquery-1.9.1.min.js") or newer.
     iii)
+        Link your website to the player.css file.
+    iv)
         On your webpage you must place 1 div with  id="playermain" 
         followed by a unordered list with links to songs.
         Also the website must execute the javascript shown below.
@@ -25,7 +27,7 @@
         </ul>
         <script>
             $(document).ready(function() {
-            $('#playermain').musicPlayer();
+            	$('#playermain').musicPlayer();
             });
         </script>
         <!-----------------ExampleEnd---------------------->
